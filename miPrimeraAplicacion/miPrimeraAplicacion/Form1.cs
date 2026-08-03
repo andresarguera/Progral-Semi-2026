@@ -21,5 +21,26 @@ namespace miPrimeraAplicacion
         {
             MessageBox.Show("Hola chicosss");
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNum1_Click(object sender, EventArgs e)
+        {
+            double num1, num2, resultado;
+            num1 = double.Parse(txtNum1.Text); //txtNum1.Text > cadena="5" => 5.0
+            num2 = double.Parse(txtNum2.Text);
+
+            resultado = num1 + num2;
+
+            lblRespuesta.Text = "Respuesta: " + resultado.ToString();
+        }
     }
 }
