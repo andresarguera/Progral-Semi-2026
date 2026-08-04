@@ -206,11 +206,13 @@
             "Division",
             "Exponenciacion",
             "Raiz",
-            "Factorial"});
+            "Factorial",
+            "Modulo"});
             this.cboOpciones.Location = new System.Drawing.Point(164, 94);
             this.cboOpciones.Name = "cboOpciones";
             this.cboOpciones.Size = new System.Drawing.Size(372, 28);
             this.cboOpciones.TabIndex = 7;
+            this.cboOpciones.SelectedIndexChanged += new System.EventHandler(this.cboOpciones_SelectedIndexChanged);
             // 
             // lblOpciones
             // 

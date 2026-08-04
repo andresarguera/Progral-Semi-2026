@@ -98,6 +98,9 @@ namespace miPrimeraAplicacion
                         resultado = resultado * i;
                     }
                     break;
+                case 7:
+                    resultado = num1 % num2;
+                    break;
             }
             lblRespuesta.Text = "Respuesta: " + Math.Round(resultado, 4).ToString();
         }
@@ -118,6 +121,11 @@ namespace miPrimeraAplicacion
         }
 
         private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboOpciones_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
