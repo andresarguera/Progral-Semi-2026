@@ -42,6 +42,8 @@
             this.rdbFactorial = new System.Windows.Forms.RadioButton();
             this.rdbRaiz = new System.Windows.Forms.RadioButton();
             this.rdbExponente = new System.Windows.Forms.RadioButton();
+            this.cboOpciones = new System.Windows.Forms.ComboBox();
+            this.lblOpciones = new System.Windows.Forms.Label();
             this.grbOpciones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +51,7 @@
             // 
             this.lblNum1.AutoSize = true;
             this.lblNum1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNum1.Location = new System.Drawing.Point(60, 49);
+            this.lblNum1.Location = new System.Drawing.Point(60, 181);
             this.lblNum1.Name = "lblNum1";
             this.lblNum1.Size = new System.Drawing.Size(98, 33);
             this.lblNum1.TabIndex = 0;
@@ -58,7 +60,7 @@
             // txtNum1
             // 
             this.txtNum1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNum1.Location = new System.Drawing.Point(164, 49);
+            this.txtNum1.Location = new System.Drawing.Point(164, 181);
             this.txtNum1.Name = "txtNum1";
             this.txtNum1.Size = new System.Drawing.Size(204, 40);
             this.txtNum1.TabIndex = 1;
@@ -66,7 +68,7 @@
             // txtNum2
             // 
             this.txtNum2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNum2.Location = new System.Drawing.Point(164, 135);
+            this.txtNum2.Location = new System.Drawing.Point(164, 267);
             this.txtNum2.Name = "txtNum2";
             this.txtNum2.Size = new System.Drawing.Size(204, 40);
             this.txtNum2.TabIndex = 3;
@@ -75,7 +77,7 @@
             // 
             this.lblNum2.AutoSize = true;
             this.lblNum2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNum2.Location = new System.Drawing.Point(60, 135);
+            this.lblNum2.Location = new System.Drawing.Point(60, 267);
             this.lblNum2.Name = "lblNum2";
             this.lblNum2.Size = new System.Drawing.Size(98, 33);
             this.lblNum2.TabIndex = 2;
@@ -84,7 +86,7 @@
             // btnNum1
             // 
             this.btnNum1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNum1.Location = new System.Drawing.Point(66, 313);
+            this.btnNum1.Location = new System.Drawing.Point(66, 473);
             this.btnNum1.Name = "btnNum1";
             this.btnNum1.Size = new System.Drawing.Size(249, 80);
             this.btnNum1.TabIndex = 4;
@@ -96,7 +98,7 @@
             // 
             this.lblRespuesta.AutoSize = true;
             this.lblRespuesta.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRespuesta.Location = new System.Drawing.Point(60, 231);
+            this.lblRespuesta.Location = new System.Drawing.Point(60, 383);
             this.lblRespuesta.Name = "lblRespuesta";
             this.lblRespuesta.Size = new System.Drawing.Size(155, 33);
             this.lblRespuesta.TabIndex = 5;
@@ -112,7 +114,7 @@
             this.grbOpciones.Controls.Add(this.rdbMultiplicacion);
             this.grbOpciones.Controls.Add(this.rdbResta);
             this.grbOpciones.Controls.Add(this.rdbSuma);
-            this.grbOpciones.Location = new System.Drawing.Point(470, 40);
+            this.grbOpciones.Location = new System.Drawing.Point(473, 250);
             this.grbOpciones.Name = "grbOpciones";
             this.grbOpciones.Size = new System.Drawing.Size(200, 252);
             this.grbOpciones.TabIndex = 6;
@@ -193,11 +195,41 @@
             this.rdbExponente.Text = "Exponenciacion";
             this.rdbExponente.UseVisualStyleBackColor = true;
             // 
+            // cboOpciones
+            // 
+            this.cboOpciones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboOpciones.FormattingEnabled = true;
+            this.cboOpciones.Items.AddRange(new object[] {
+            "Suma",
+            "Resta",
+            "Multiplicacion",
+            "Division",
+            "Exponenciacion",
+            "Raiz",
+            "Factorial"});
+            this.cboOpciones.Location = new System.Drawing.Point(164, 94);
+            this.cboOpciones.Name = "cboOpciones";
+            this.cboOpciones.Size = new System.Drawing.Size(372, 28);
+            this.cboOpciones.TabIndex = 7;
+            // 
+            // lblOpciones
+            // 
+            this.lblOpciones.AutoSize = true;
+            this.lblOpciones.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOpciones.Location = new System.Drawing.Point(30, 89);
+            this.lblOpciones.Name = "lblOpciones";
+            this.lblOpciones.Size = new System.Drawing.Size(128, 33);
+            this.lblOpciones.TabIndex = 8;
+            this.lblOpciones.Text = "Opciones:";
+            this.lblOpciones.Click += new System.EventHandler(this.label1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 450);
+            this.ClientSize = new System.Drawing.Size(716, 609);
+            this.Controls.Add(this.lblOpciones);
+            this.Controls.Add(this.cboOpciones);
             this.Controls.Add(this.grbOpciones);
             this.Controls.Add(this.lblRespuesta);
             this.Controls.Add(this.btnNum1);
@@ -231,6 +263,8 @@
         private System.Windows.Forms.RadioButton rdbMultiplicacion;
         private System.Windows.Forms.RadioButton rdbResta;
         private System.Windows.Forms.RadioButton rdbSuma;
+        private System.Windows.Forms.ComboBox cboOpciones;
+        private System.Windows.Forms.Label lblOpciones;
     }
 }
 

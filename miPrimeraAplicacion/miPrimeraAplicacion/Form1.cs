@@ -34,11 +34,11 @@ namespace miPrimeraAplicacion
 
         private void btnNum1_Click(object sender, EventArgs e)
         {
-            double num1, num2, resultado=0;
+            double num1, num2, resultado=0, indexOpcion=0;
             num1 = double.Parse(txtNum1.Text); //txtNum1.Text > cadena="5" => 5.0
             num2 = double.Parse(txtNum2.Text);
 
-            if (rdbSuma.Checked) { 
+            /*if (rdbSuma.Checked) { 
             resultado = num1 + num2;
             }
             if (rdbResta.Checked)
@@ -68,6 +68,35 @@ namespace miPrimeraAplicacion
                 {
                     resultado = resultado * i;
                 }
+            }*/
+            indexOpcion = cboOpciones.SelectedIndex;
+            switch (indexOpcion)
+            {
+                case 0:
+                    resultado = num1 + num2;
+                    break;
+                case 1:
+                    resultado = num1 - num2;
+                    break;
+                case 2:
+                    resultado = num1 * num2;
+                    break;
+                case 3:
+                    resultado = num1 / num2;
+                    break;
+                case 4:
+                    resultado = Math.Pow(num1, num2); //elevar num1 a la potencia num2
+                    break;
+                case 5:
+                    resultado = Math.Pow(num1, 1 / num2); //Raiz num2 de num1
+                    break;
+                case 6:
+                    resultado = 1;
+                    for (int i = 1; i <= num1; i++)
+                    {
+                        resultado = resultado * i;
+                    }
+                    break;
             }
             lblRespuesta.Text = "Respuesta: " + Math.Round(resultado, 4).ToString();
         }
@@ -83,6 +112,11 @@ namespace miPrimeraAplicacion
         }
 
         private void rdbSuma_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
