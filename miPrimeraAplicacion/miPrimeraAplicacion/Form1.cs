@@ -33,77 +33,42 @@ namespace miPrimeraAplicacion
         }
 
         private void btnNum1_Click(object sender, EventArgs e)
-            //Tarea: agrega la opcion de modulo, obtener el residuo de la division de num1 entre num2
+            
         {
-            double num1, num2, resultado=0, indexOpcion=0;
-            num1 = double.Parse(txtNum1.Text); //txtNum1.Text > cadena="5" => 5.0
-            num2 = double.Parse(txtNum2.Text);
-
-            /*if (rdbSuma.Checked) { 
-            resultado = num1 + num2;
-            }
-            if (rdbResta.Checked)
+            int edad = int.Parse(txtEdad.Text);
+            if (edad < 0)
             {
-                resultado = num1 - num2;
+                lblRespuesta.Text = "Edad no valida";
             }
-            if (rdbMultiplicacion.Checked)
+            else if (edad <= 2)
             {
-                resultado = num1 * num2;
+                lblRespuesta.Text = "Eres un bebe";
             }
-            if (rdbDivision.Checked)
+            else if (edad < 12)
             {
-                resultado = num1 / num2;
+                lblRespuesta.Text = "Eres un niño";
             }
-            if (rdbExponente.Checked)
+            else if (edad <= 17)
             {
-                resultado = Math.Pow(num1, num2); //elevar num1 a la potencia num2
+                lblRespuesta.Text = "Eres un adolescente";
             }
-            if (rdbRaiz.Checked)
+            else if (edad < 65)
             {
-                resultado = Math.Pow(num1, 1 / num2); //Raiz num2 de num1
+                lblRespuesta.Text = "Eres un adulto";
             }
-            if (rdbFactorial.Checked)
-            { //5*4*3*2*1=120
-                resultado = 1;
-                for (int i = 1; i <= num1; i++)
-                {
-                    resultado = resultado * i;
-                }
-            }*/
-            indexOpcion = cboOpciones.SelectedIndex;
-            switch (indexOpcion)
+            else if (edad <= 80)
             {
-                case 0:
-                    resultado = num1 + num2;
-                    break;
-                case 1:
-                    resultado = num1 - num2;
-                    break;
-                case 2:
-                    resultado = num1 * num2;
-                    break;
-                case 3:
-                    resultado = num1 / num2;
-                    break;
-                case 4:
-                    resultado = Math.Pow(num1, num2); //elevar num1 a la potencia num2
-                    break;
-                case 5:
-                    resultado = Math.Pow(num1, 1 / num2); //Raiz num2 de num1
-                    break;
-                case 6:
-                    resultado = 1;
-                    for (int i = 1; i <= num1; i++)
-                    {
-                        resultado = resultado * i;
-                    }
-                    break;
-                case 7:
-                    resultado = num1 % num2;
-                    break;
+                lblRespuesta.Text = "Eres un adulto mayor";
             }
-            lblRespuesta.Text = "Respuesta: " + Math.Round(resultado, 4).ToString();
-        }
+            else if (edad <= 130)
+            {
+                lblRespuesta.Text = "Larga vidad";
+            }
+            else
+            {
+                lblRespuesta.Text = "Edad no valida";
+            }
+            }
 
         private void radioButton11_CheckedChanged(object sender, EventArgs e)
         {
@@ -126,6 +91,11 @@ namespace miPrimeraAplicacion
         }
 
         private void cboOpciones_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNum1_Click(object sender, EventArgs e)
         {
 
         }
