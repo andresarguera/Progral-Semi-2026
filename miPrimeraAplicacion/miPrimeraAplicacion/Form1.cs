@@ -38,38 +38,18 @@ namespace miPrimeraAplicacion
             try
             {
                 int edad = int.Parse(txtEdad.Text);
-                if (edad < 0)
-                {
-                    lblRespuesta.Text = "Edad no valida";
-                }
-                else if (edad <= 2)
-                {
-                    lblRespuesta.Text = "Eres un bebe";
-                }
-                else if (edad < 12)
-                {
-                    lblRespuesta.Text = "Eres un niño";
-                }
-                else if (edad <= 17)
-                {
-                    lblRespuesta.Text = "Eres un adolescente";
-                }
-                else if (edad < 65)
-                {
-                    lblRespuesta.Text = "Eres un adulto";
-                }
-                else if (edad <= 80)
-                {
-                    lblRespuesta.Text = "Eres un adulto mayor";
-                }
-                else if (edad <= 130)
-                {
-                    lblRespuesta.Text = "Larga vida";
-                }
-                else
-                {
-                    lblRespuesta.Text = "Edad no valida";
-                }
+                String msg = "Ingresa tu edad";
+
+                //if ternario
+                msg = edad < 0 ? "Edad no valida" :
+                    edad <= 2 ? "Eres un bebe" :
+                    edad < 12 ? "Eres un niño" :
+                    edad <= 17 ? "Eres un adolescente" :
+                    edad < 65 ? "Eres un adulto" :
+                    edad <= 80 ? "Eres un adulto mayor" :
+                    edad <= 130 ? "Larga vida" : "Edad no valida";
+
+                lblRespuesta.Text = msg;
             }
             catch (Exception)
             {
@@ -77,34 +57,18 @@ namespace miPrimeraAplicacion
             }
             }
 
-        private void radioButton11_CheckedChanged(object sender, EventArgs e)
+        private void txtEdad_TextChanged(object sender, EventArgs e)
         {
 
         }
+    } 
+            }
+        
 
-        private void grbOpciones_Enter(object sender, EventArgs e)
-        {
+        
 
-        }
 
-        private void rdbSuma_CheckedChanged(object sender, EventArgs e)
-        {
+      
 
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboOpciones_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNum1_Click(object sender, EventArgs e)
-        {
-
-        }
-    }
-}
+        
+  

@@ -43,7 +43,6 @@
             this.lblEdad.Size = new System.Drawing.Size(80, 33);
             this.lblEdad.TabIndex = 0;
             this.lblEdad.Text = "Edad:";
-            this.lblEdad.Click += new System.EventHandler(this.lblNum1_Click);
             // 
             // txtEdad
             // 
@@ -52,6 +51,7 @@
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(204, 40);
             this.txtEdad.TabIndex = 1;
+            this.txtEdad.TextChanged += new System.EventHandler(this.txtEdad_TextChanged);
             // 
             // btnNum1
             // 
