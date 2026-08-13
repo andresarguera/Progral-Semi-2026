@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblEdad = new System.Windows.Forms.Label();
-            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.lblTabla = new System.Windows.Forms.Label();
+            this.txtTabla = new System.Windows.Forms.TextBox();
             this.btnNum1 = new System.Windows.Forms.Button();
             this.lblRespuesta = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblEdad
+            // lblTabla
             // 
-            this.lblEdad.AutoSize = true;
-            this.lblEdad.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdad.Location = new System.Drawing.Point(66, 119);
-            this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(80, 33);
-            this.lblEdad.TabIndex = 0;
-            this.lblEdad.Text = "Edad:";
+            this.lblTabla.AutoSize = true;
+            this.lblTabla.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTabla.Location = new System.Drawing.Point(66, 119);
+            this.lblTabla.Name = "lblTabla";
+            this.lblTabla.Size = new System.Drawing.Size(124, 33);
+            this.lblTabla.TabIndex = 0;
+            this.lblTabla.Text = "Tabla del:";
             // 
-            // txtEdad
+            // txtTabla
             // 
-            this.txtEdad.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEdad.Location = new System.Drawing.Point(163, 116);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(204, 40);
-            this.txtEdad.TabIndex = 1;
-            this.txtEdad.TextChanged += new System.EventHandler(this.txtEdad_TextChanged);
+            this.txtTabla.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTabla.Location = new System.Drawing.Point(196, 116);
+            this.txtTabla.Name = "txtTabla";
+            this.txtTabla.Size = new System.Drawing.Size(204, 40);
+            this.txtTabla.TabIndex = 1;
+            this.txtTabla.TextChanged += new System.EventHandler(this.txtEdad_TextChanged);
             // 
             // btnNum1
             // 
@@ -68,7 +68,7 @@
             // 
             this.lblRespuesta.AutoSize = true;
             this.lblRespuesta.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRespuesta.Location = new System.Drawing.Point(399, 119);
+            this.lblRespuesta.Location = new System.Drawing.Point(425, 119);
             this.lblRespuesta.Name = "lblRespuesta";
             this.lblRespuesta.Size = new System.Drawing.Size(155, 33);
             this.lblRespuesta.TabIndex = 5;
@@ -82,8 +82,8 @@
             this.ClientSize = new System.Drawing.Size(1050, 609);
             this.Controls.Add(this.lblRespuesta);
             this.Controls.Add(this.btnNum1);
-            this.Controls.Add(this.txtEdad);
-            this.Controls.Add(this.lblEdad);
+            this.Controls.Add(this.txtTabla);
+            this.Controls.Add(this.lblTabla);
             this.Name = "Form1";
             this.Text = "Form 1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -94,8 +94,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblEdad;
-        private System.Windows.Forms.TextBox txtEdad;
+        private System.Windows.Forms.Label lblTabla;
+        private System.Windows.Forms.TextBox txtTabla;
         private System.Windows.Forms.Button btnNum1;
         private System.Windows.Forms.Label lblRespuesta;
     }
