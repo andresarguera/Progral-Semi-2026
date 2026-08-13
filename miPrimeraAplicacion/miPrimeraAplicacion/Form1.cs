@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace miPrimeraAplicacion
+namespace miPrimeaAplicacion
 {
     public partial class Form1 : Form
     {
@@ -16,54 +16,24 @@ namespace miPrimeraAplicacion
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Hola chicosss");
-        }
-
+        /*
+          Metros, Cm, Pulgadas, Pies, Varas, Yardas, Km,Millas
+         */
+        Double[] valores = { 1, 100, 39.3701, 3.28084, 1.1963, 1.09361, 0.001, 0.000621371 };
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
+        
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnCalcular_Click_1(object sender, EventArgs e)
         {
+            int de = cboDe.SelectedIndex, a = cboA.SelectedIndex;
+            double cantidad = Double.Parse(txtCantidad.Text);
 
+            double respuesta = valores[a] / valores[de] * cantidad;
+
+            lblRespuesta.Text = respuesta.ToString();
         }
-
-        private void btnNum1_Click(object sender, EventArgs e)
-            
-        {
-            try
-            {
-                int tabla = int.Parse(txtTabla.Text);
-                String msg = "";
-                for (int i = 1; i <= 10; i++)
-                {
-                    msg += $"{tabla} x {i} = {tabla * i}\n";
-                }
-
-                lblRespuesta.Text = msg;
-            }
-            catch (Exception)
-            {
-                lblRespuesta.Text = "Por favor ingrese la edad en numero entero";
-            }
-            }
-
-        private void txtEdad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-    } 
-            }
-        
-
-        
-
-
-      
-
-        
-  
+    }
+}
