@@ -37,13 +37,12 @@ namespace miPrimeraAplicacion
         {
             try
             {
-                int tabla = int.Parse(txtTabla.Text), i = 1;
+                int tabla = int.Parse(txtTabla.Text);
                 String msg = "";
-                do
+                for (int i = 1; i <= 10; i++)
                 {
                     msg += $"{tabla} x {i} = {tabla * i}\n";
-                    i++; // i= i+1
-                } while (i <= 10);
+                }
 
                 lblRespuesta.Text = msg;
             }
