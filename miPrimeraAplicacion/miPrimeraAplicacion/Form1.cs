@@ -17,13 +17,11 @@ namespace miPrimeaAplicacion
             InitializeComponent();
         }
 
-        private void btnCalcular_Click(object sender, EventArgs e)
-        {
-            String[] serie = txtSerie.Text.Split(',');
+       
 
-            ltsRespuesta.DataSource = serie.Select(n => int.Parse(n)).Where(n => n % 2 == 0)
-                .OrderBy(n => n)
-                .ToList();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
     }

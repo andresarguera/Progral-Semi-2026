@@ -54,7 +54,7 @@
             this.btnCalcular.TabIndex = 4;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            
             // 
             // lblSerie
             // 
@@ -94,6 +94,7 @@
             this.Controls.Add(this.txtRespuesta);
             this.Name = "Form1";
             this.Text = "Conversores";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
