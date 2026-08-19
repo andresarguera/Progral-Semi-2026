@@ -178,7 +178,7 @@
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblDe);
             this.Name = "Form1";
-            this.Text = "Form 1";
+            this.Text = "Conversores";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
