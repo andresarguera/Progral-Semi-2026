@@ -28,72 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtRespuesta = new System.Windows.Forms.Label();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.lblSerie = new System.Windows.Forms.Label();
-            this.ltsRespuesta = new System.Windows.Forms.ListBox();
             this.txtSerie = new System.Windows.Forms.TextBox();
+            this.lblSerie = new System.Windows.Forms.Label();
+            this.btnProcesar = new System.Windows.Forms.Button();
+            this.ltsValores = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // txtRespuesta
+            // txtSerie
             // 
-            this.txtRespuesta.AutoSize = true;
-            this.txtRespuesta.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRespuesta.Location = new System.Drawing.Point(34, 229);
-            this.txtRespuesta.Name = "txtRespuesta";
-            this.txtRespuesta.Size = new System.Drawing.Size(83, 33);
-            this.txtRespuesta.TabIndex = 0;
-            this.txtRespuesta.Text = "Pares:";
-            // 
-            // btnCalcular
-            // 
-            this.btnCalcular.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(507, 405);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(313, 107);
-            this.btnCalcular.TabIndex = 4;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = true;
-            
+            this.txtSerie.Location = new System.Drawing.Point(138, 76);
+            this.txtSerie.Name = "txtSerie";
+            this.txtSerie.Size = new System.Drawing.Size(250, 26);
+            this.txtSerie.TabIndex = 13;
             // 
             // lblSerie
             // 
             this.lblSerie.AutoSize = true;
             this.lblSerie.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSerie.Location = new System.Drawing.Point(34, 96);
+            this.lblSerie.Location = new System.Drawing.Point(38, 69);
             this.lblSerie.Name = "lblSerie";
             this.lblSerie.Size = new System.Drawing.Size(80, 33);
             this.lblSerie.TabIndex = 10;
             this.lblSerie.Text = "Serie:";
             // 
-            // ltsRespuesta
+            // btnProcesar
             // 
-            this.ltsRespuesta.FormattingEnabled = true;
-            this.ltsRespuesta.ItemHeight = 20;
-            this.ltsRespuesta.Location = new System.Drawing.Point(123, 229);
-            this.ltsRespuesta.Name = "ltsRespuesta";
-            this.ltsRespuesta.Size = new System.Drawing.Size(314, 164);
-            this.ltsRespuesta.TabIndex = 12;
+            this.btnProcesar.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcesar.Location = new System.Drawing.Point(502, 302);
+            this.btnProcesar.Name = "btnProcesar";
+            this.btnProcesar.Size = new System.Drawing.Size(313, 196);
+            this.btnProcesar.TabIndex = 4;
+            this.btnProcesar.Text = "Procesar";
+            this.btnProcesar.UseVisualStyleBackColor = true;
+            this.btnProcesar.Click += new System.EventHandler(this.btnProcesar_Click);
             // 
-            // txtSerie
+            // ltsValores
             // 
-            this.txtSerie.Location = new System.Drawing.Point(136, 103);
-            this.txtSerie.Name = "txtSerie";
-            this.txtSerie.Size = new System.Drawing.Size(100, 26);
-            this.txtSerie.TabIndex = 13;
+            this.ltsValores.FormattingEnabled = true;
+            this.ltsValores.ItemHeight = 20;
+            this.ltsValores.Location = new System.Drawing.Point(44, 191);
+            this.ltsValores.Name = "ltsValores";
+            this.ltsValores.Size = new System.Drawing.Size(397, 324);
+            this.ltsValores.TabIndex = 14;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 609);
+            this.Controls.Add(this.ltsValores);
             this.Controls.Add(this.txtSerie);
-            this.Controls.Add(this.ltsRespuesta);
             this.Controls.Add(this.lblSerie);
-            this.Controls.Add(this.btnCalcular);
-            this.Controls.Add(this.txtRespuesta);
+            this.Controls.Add(this.btnProcesar);
             this.Name = "Form1";
-            this.Text = "Conversores";
+            this.Text = "Media Aritmetica";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -101,12 +89,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label txtRespuesta;
-        private System.Windows.Forms.Button btnCalcular;
-        private System.Windows.Forms.Label lblSerie;
-        private System.Windows.Forms.ListBox ltsRespuesta;
         private System.Windows.Forms.TextBox txtSerie;
+        private System.Windows.Forms.Label lblSerie;
+        private System.Windows.Forms.Button btnProcesar;
+        private System.Windows.Forms.ListBox ltsValores;
     }
 }
 
