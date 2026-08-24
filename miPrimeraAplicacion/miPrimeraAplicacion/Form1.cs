@@ -26,40 +26,36 @@ namespace miPrimeaAplicacion
             double media = suma / serie.Length;
             return media;
         }
-
         double desviacionTipica(double[] serie, double media)
         {
             return Math.Sqrt(serie.Average(n => Math.Pow(n - media, 2)));
         }
-
-        // Nueva función: Media Armónica
-        double mediaArmonica(double[] serie)
+        double armonica(double[] serie)
         {
-            double sumaInversos = 0;
-            for (int i = 0; i < serie.Length; i++)
-            {
-                sumaInversos += 1 / serie[i];
-            }
-            return serie.Length / sumaInversos;
+            int n = serie.Length;
+            return n / serie.Sum(x => 1 / x);
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
+            limpiar();
             String[] serie = txtSerie.Text.Split(',');
             double[] miSerie = serie.Select(n => double.Parse(n)).ToArray();
-
             double m = media(miSerie);
-            double h = mediaArmonica(miSerie);
 
             ltsValores.Items.Add("La media es: " + m);
-            ltsValores.Items.Add("La media armónica es: " + h);
             ltsValores.Items.Add("La desviacion tipica: " + desviacionTipica(miSerie, m));
+            ltsValores.Items.Add("La media armonica: " + armonica(miSerie));
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
-
+            limpiar();
+        }
+        private void limpiar()
+        {
+            ltsValores.Items.Clear();
+            //txtSerie.Clear();
         }
     }
-    }
-    
+}
