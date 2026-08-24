@@ -26,9 +26,13 @@ namespace miPrimeaAplicacion
             double media = suma / serie.Length;
             return media;
         }
+        double varianza(double[] serie, double media)
+        {
+            return serie.Average(n => Math.Pow(n - media, 2));
+        }
         double desviacionTipica(double[] serie, double media)
         {
-            return Math.Sqrt(serie.Average(n => Math.Pow(n - media, 2)));
+            return Math.Sqrt(varianza(serie, media));
         }
         double armonica(double[] serie)
         {
@@ -44,6 +48,7 @@ namespace miPrimeaAplicacion
             double m = media(miSerie);
 
             ltsValores.Items.Add("La media es: " + m);
+            ltsValores.Items.Add("La desviacion estandar: " + varianza(miSerie, m));
             ltsValores.Items.Add("La desviacion tipica: " + desviacionTipica(miSerie, m));
             ltsValores.Items.Add("La media armonica: " + armonica(miSerie));
         }
@@ -56,6 +61,11 @@ namespace miPrimeaAplicacion
         {
             ltsValores.Items.Clear();
             //txtSerie.Clear();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
