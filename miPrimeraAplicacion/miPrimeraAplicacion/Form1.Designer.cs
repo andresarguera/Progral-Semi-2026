@@ -1,4 +1,4 @@
-﻿namespace miPrimeaAplicacion
+﻿namespace miPrimeraAplicacion
 {
     partial class Form1
     {
@@ -28,84 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtRespuesta = new System.Windows.Forms.Label();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.lblSerie = new System.Windows.Forms.Label();
-            this.ltsRespuesta = new System.Windows.Forms.ListBox();
-            this.txtSerie = new System.Windows.Forms.TextBox();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.lblListado = new System.Windows.Forms.Label();
+            this.lblSiguiente = new System.Windows.Forms.Label();
+            this.btnAtender = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtRespuesta
+            // btnRegistrar
             // 
-            this.txtRespuesta.AutoSize = true;
-            this.txtRespuesta.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRespuesta.Location = new System.Drawing.Point(34, 229);
-            this.txtRespuesta.Name = "txtRespuesta";
-            this.txtRespuesta.Size = new System.Drawing.Size(83, 33);
-            this.txtRespuesta.TabIndex = 0;
-            this.txtRespuesta.Text = "Pares:";
+            this.btnRegistrar.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Location = new System.Drawing.Point(26, 91);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(313, 81);
+            this.btnRegistrar.TabIndex = 4;
+            this.btnRegistrar.Text = "Registrar Paciente";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
             // 
-            // btnCalcular
+            // lblListado
             // 
-            this.btnCalcular.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(507, 405);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(313, 107);
-            this.btnCalcular.TabIndex = 4;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = true;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            this.lblListado.AutoSize = true;
+            this.lblListado.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListado.Location = new System.Drawing.Point(20, 25);
+            this.lblListado.Name = "lblListado";
+            this.lblListado.Size = new System.Drawing.Size(327, 41);
+            this.lblListado.TabIndex = 10;
+            this.lblListado.Text = "Listado de pacientes";
             // 
-            // lblSerie
+            // lblSiguiente
             // 
-            this.lblSerie.AutoSize = true;
-            this.lblSerie.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSerie.Location = new System.Drawing.Point(34, 96);
-            this.lblSerie.Name = "lblSerie";
-            this.lblSerie.Size = new System.Drawing.Size(80, 33);
-            this.lblSerie.TabIndex = 10;
-            this.lblSerie.Text = "Serie:";
+            this.lblSiguiente.AutoSize = true;
+            this.lblSiguiente.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSiguiente.Location = new System.Drawing.Point(626, 163);
+            this.lblSiguiente.Name = "lblSiguiente";
+            this.lblSiguiente.Size = new System.Drawing.Size(109, 33);
+            this.lblSiguiente.TabIndex = 29;
+            this.lblSiguiente.Text = "Paciente";
             // 
-            // ltsRespuesta
+            // btnAtender
             // 
-            this.ltsRespuesta.FormattingEnabled = true;
-            this.ltsRespuesta.ItemHeight = 20;
-            this.ltsRespuesta.Location = new System.Drawing.Point(123, 229);
-            this.ltsRespuesta.Name = "ltsRespuesta";
-            this.ltsRespuesta.Size = new System.Drawing.Size(314, 164);
-            this.ltsRespuesta.TabIndex = 12;
+            this.btnAtender.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtender.Location = new System.Drawing.Point(26, 216);
+            this.btnAtender.Name = "btnAtender";
+            this.btnAtender.Size = new System.Drawing.Size(313, 81);
+            this.btnAtender.TabIndex = 30;
+            this.btnAtender.Text = "Atender";
+            this.btnAtender.UseVisualStyleBackColor = true;
             // 
-            // txtSerie
+            // dataGridView1
             // 
-            this.txtSerie.Location = new System.Drawing.Point(136, 103);
-            this.txtSerie.Name = "txtSerie";
-            this.txtSerie.Size = new System.Drawing.Size(100, 26);
-            this.txtSerie.TabIndex = 13;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(26, 329);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(1133, 677);
+            this.dataGridView1.TabIndex = 31;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 609);
-            this.Controls.Add(this.txtSerie);
-            this.Controls.Add(this.ltsRespuesta);
-            this.Controls.Add(this.lblSerie);
-            this.Controls.Add(this.btnCalcular);
-            this.Controls.Add(this.txtRespuesta);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1183, 1018);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnAtender);
+            this.Controls.Add(this.lblSiguiente);
+            this.Controls.Add(this.lblListado);
+            this.Controls.Add(this.btnRegistrar);
             this.Name = "Form1";
-            this.Text = "Conversores";
+            this.Text = "Sistema de gestión de tiempo y demanda";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label txtRespuesta;
-        private System.Windows.Forms.Button btnCalcular;
-        private System.Windows.Forms.Label lblSerie;
-        private System.Windows.Forms.ListBox ltsRespuesta;
-        private System.Windows.Forms.TextBox txtSerie;
+        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Label lblListado;
+        private System.Windows.Forms.Label lblSiguiente;
+        private System.Windows.Forms.Button btnAtender;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
