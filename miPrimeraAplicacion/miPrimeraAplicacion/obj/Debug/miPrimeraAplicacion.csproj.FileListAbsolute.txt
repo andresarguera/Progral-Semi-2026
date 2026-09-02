@@ -8,4 +8,3 @@ C:\Users\Admin\Desktop\Progral-Semi-2026\miPrimeraAplicacion\miPrimeraAplicacion
 C:\Users\Admin\Desktop\Progral-Semi-2026\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.exe
 C:\Users\Admin\Desktop\Progral-Semi-2026\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.pdb
 C:\Users\Admin\Desktop\Progral-Semi-2026\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.Form1.resources
-C:\Users\Admin\Desktop\Progral-Semi-2026\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.FrmPaciente.resources

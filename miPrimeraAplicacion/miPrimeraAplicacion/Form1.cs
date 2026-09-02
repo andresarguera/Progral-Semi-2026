@@ -1,204 +1,96 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace miPrimeraAplicacion
 {
     public partial class Form1 : Form
     {
-        public enum Prioridad
-        {
-            Emergencia = 1,
-            Urgencia = 2,
-            DemandaEspontanea = 3,
-            CitaPrevia = 4
-        }
+        String[][] etiquetas = { new[] { "Pie Cuadrado", "Vara Cuadrada", "Yarda Cuadrada", "Metro Cuadrado", "Tarea", "Manzana", "Hectárea" } };
+        Double[][] valores = { new[] { 0.09290304, 0.698739, 0.83612736, 1.0, 437.5, 6988.96, 10000.0 } };
 
-        public class Paciente
-        {
-            public string Nombre { get; set; }
-            public int Edad { get; set; }
-            public string MotivoConsulta { get; set; }
-            public Prioridad NivelPrioridad { get; set; }
-        }
-
-        private List<Paciente> pacientes;
+        private int opcion = 0;
 
         public Form1()
         {
             InitializeComponent();
 
-            pacientes = new List<Paciente>();
-
-            ConfigurarDataGridView();
-
-            btnRegistrar.Click -= btnRegistrar_Click;
-            btnRegistrar.Click += btnRegistrar_Click;
-
-            btnAtender.Click -= btnAtender_Click;
-            btnAtender.Click += btnAtender_Click;
-
-            dataGridView1.CellFormatting -= dataGridView1_CellFormatting;
-            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
+            btnCalcular.Click += btnCalcular_Click;
+            btnLimpiar.Click += btnLimpiar_Click;
+            
+            this.Load += Form1_Load;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            cboDe.Items.Clear();
+            cboA.Items.Clear();
+
+            cboDe.Items.AddRange(etiquetas[opcion]);
+            cboA.Items.AddRange(etiquetas[opcion]);
+
+            cboDe.SelectedIndex = 0;
+            cboA.SelectedIndex = 3;
         }
 
-        private void ConfigurarDataGridView()
+        private void btnCalcular_Click(object sender, EventArgs e)
         {
-            dataGridView1.Columns.Clear();
+            double cantidad;
 
-            dataGridView1.AutoSizeColumnsMode =
-                DataGridViewAutoSizeColumnsMode.Fill;
-
-            dataGridView1.SelectionMode =
-                DataGridViewSelectionMode.FullRowSelect;
-
-            dataGridView1.MultiSelect = false;
-
-            dataGridView1.AllowUserToAddRows = false;
-
-            dataGridView1.AllowUserToDeleteRows = false;
-
-            dataGridView1.RowHeadersVisible = false;
-
-            dataGridView1.Columns.Add("Nombre", "Nombre del paciente");
-            dataGridView1.Columns.Add("Edad", "Edad");
-            dataGridView1.Columns.Add("Motivo", "Motivo de consulta");
-            dataGridView1.Columns.Add("NivelPrioridad", "Prioridad");
-        }
-
-        public void AgregarPaciente(Paciente paciente)
-        {
-            pacientes.Add(paciente);
-            MostrarPacientes();
-        }
-
-        private void MostrarPacientes()
-        {
-            dataGridView1.Rows.Clear();
-
-            var pacientesOrdenados = pacientes
-                .OrderBy(p => p.NivelPrioridad)
-                .ToList();
-
-            foreach (Paciente paciente in pacientesOrdenados)
+            if (!double.TryParse(txtCantidad.Text, NumberStyles.Any, CultureInfo.CurrentCulture, out cantidad))
             {
-                int fila = dataGridView1.Rows.Add();
-
-                dataGridView1.Rows[fila].Cells["Nombre"].Value =
-                    paciente.Nombre;
-
-                dataGridView1.Rows[fila].Cells["Edad"].Value =
-                    paciente.Edad;
-
-                dataGridView1.Rows[fila].Cells["Motivo"].Value =
-                    paciente.MotivoConsulta;
-
-                dataGridView1.Rows[fila].Cells["NivelPrioridad"].Value =
-                    ObtenerTextoPrioridad(paciente.NivelPrioridad);
-            }
-        }
-
-        private void dataGridView1_CellFormatting(
-            object sender,
-            DataGridViewCellFormattingEventArgs e)
-        {
-            if (e.RowIndex < 0 ||
-                e.RowIndex >= dataGridView1.Rows.Count)
-                return;
-
-            string prioridad =
-                dataGridView1.Rows[e.RowIndex]
-                .Cells["NivelPrioridad"]
-                .Value?.ToString();
-
-            switch (prioridad)
-            {
-                case "Prioridad I - Emergencia":
-                    dataGridView1.Rows[e.RowIndex]
-                        .DefaultCellStyle.BackColor = Color.Red;
-
-                    dataGridView1.Rows[e.RowIndex]
-                        .DefaultCellStyle.ForeColor = Color.White;
-                    break;
-
-                case "Prioridad II - Urgencia":
-                    dataGridView1.Rows[e.RowIndex]
-                        .DefaultCellStyle.BackColor = Color.Yellow;
-
-                    dataGridView1.Rows[e.RowIndex]
-                        .DefaultCellStyle.ForeColor = Color.Black;
-                    break;
-
-                case "Prioridad III - Verde":
-                    dataGridView1.Rows[e.RowIndex]
-                        .DefaultCellStyle.BackColor = Color.LightGreen;
-
-                    dataGridView1.Rows[e.RowIndex]
-                        .DefaultCellStyle.ForeColor = Color.Black;
-                    break;
-
-                case "Cita Previa":
-                    dataGridView1.Rows[e.RowIndex]
-                        .DefaultCellStyle.BackColor = Color.LightBlue;
-
-                    dataGridView1.Rows[e.RowIndex]
-                        .DefaultCellStyle.ForeColor = Color.Black;
-                    break;
-            }
-        }
-
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            FrmPaciente formularioPaciente = new FrmPaciente(this);
-            formularioPaciente.ShowDialog();
-        }
-
-        private void btnAtender_Click(object sender, EventArgs e)
-        {
-            var siguiente = pacientes
-                .OrderBy(p => p.NivelPrioridad)
-                .FirstOrDefault();
-
-            if (siguiente == null)
-            {
-                lblSiguiente.Text = "No hay pacientes en espera.";
+                MessageBox.Show("Ingrese un valor numérico válido.", "Dato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCantidad.Focus();
                 return;
             }
 
-            lblSiguiente.Text =
-                $"Atendiendo a: {siguiente.Nombre} - " +
-                $"{ObtenerTextoPrioridad(siguiente.NivelPrioridad)}";
+            if (cantidad < 0)
+            {
+                MessageBox.Show("El área no puede ser negativa.", "Dato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCantidad.Focus();
+                return;
+            }
 
-            pacientes.Remove(siguiente);
+            if (cboDe.SelectedIndex == -1 || cboA.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione la unidad de origen y destino.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            MostrarPacientes();
+            int de = cboDe.SelectedIndex;
+            int a = cboA.SelectedIndex;
+
+            double respuesta;
+
+            if (de == 5 && a == 4)
+            {
+                respuesta = cantidad * 16;
+            }
+            else if (de == 4 && a == 5)
+            {
+                respuesta = cantidad / 16;
+            }
+            else
+            {
+                double metrosCuadrados = valores[opcion][de] * cantidad;
+                respuesta = metrosCuadrados / valores[opcion][a];
+            }
+
+            lblRespuesta.Text = respuesta.ToString("N6");
         }
 
-        private string ObtenerTextoPrioridad(Prioridad prioridad)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            switch (prioridad)
-            {
-                case Prioridad.Emergencia:
-                    return "Prioridad I - Emergencia";
+            txtCantidad.Clear();
+            lblRespuesta.Text = "";
+            cboDe.SelectedIndex = 0;
+            cboA.SelectedIndex = 3;
+            txtCantidad.Focus();
+        }
 
-                case Prioridad.Urgencia:
-                    return "Prioridad II - Urgencia";
-
-                case Prioridad.DemandaEspontanea:
-                    return "Prioridad III - Verde";
-
-                case Prioridad.CitaPrevia:
-                    return "Cita Previa";
-
-                default:
-                    return "";
-            }
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
