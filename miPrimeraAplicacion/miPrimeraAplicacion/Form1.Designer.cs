@@ -32,24 +32,21 @@
             this.lblSerie = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbVariables = new System.Windows.Forms.ComboBox();
-            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.dgvDeducciones = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lstResultados = new System.Windows.Forms.ListBox();
-            this.dgvFrecuencias = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFrecuencias)).BeginInit();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtSueldoBase = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeducciones)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCalcular
             // 
             this.btnCalcular.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(198, 645);
+            this.btnCalcular.Location = new System.Drawing.Point(55, 705);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(222, 67);
+            this.btnCalcular.Size = new System.Drawing.Size(273, 70);
             this.btnCalcular.TabIndex = 4;
-            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.Text = "Calcular Deducciones";
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
@@ -57,16 +54,16 @@
             // 
             this.lblSerie.AutoSize = true;
             this.lblSerie.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSerie.Location = new System.Drawing.Point(443, 34);
+            this.lblSerie.Location = new System.Drawing.Point(438, 28);
             this.lblSerie.Name = "lblSerie";
-            this.lblSerie.Size = new System.Drawing.Size(350, 45);
+            this.lblSerie.Size = new System.Drawing.Size(414, 45);
             this.lblSerie.TabIndex = 10;
-            this.lblSerie.Text = "Sistema Estadístico";
+            this.lblSerie.Text = "Planilla de deducciones";
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(484, 645);
+            this.btnLimpiar.Location = new System.Drawing.Point(533, 707);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(222, 67);
             this.btnLimpiar.TabIndex = 14;
@@ -80,88 +77,60 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(49, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 33);
+            this.label1.Size = new System.Drawing.Size(271, 33);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Seleccione la variable:";
+            this.label1.Text = "Nombre del Empleado:";
             // 
-            // cmbVariables
+            // dgvDeducciones
             // 
-            this.cmbVariables.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVariables.FormattingEnabled = true;
-            this.cmbVariables.Location = new System.Drawing.Point(319, 109);
-            this.cmbVariables.Name = "cmbVariables";
-            this.cmbVariables.Size = new System.Drawing.Size(297, 28);
-            this.cmbVariables.TabIndex = 16;
-            // 
-            // dgvDatos
-            // 
-            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(55, 154);
-            this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.RowHeadersWidth = 62;
-            this.dgvDatos.RowTemplate.Height = 28;
-            this.dgvDatos.Size = new System.Drawing.Size(789, 441);
-            this.dgvDatos.TabIndex = 17;
+            this.dgvDeducciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDeducciones.Location = new System.Drawing.Point(55, 240);
+            this.dgvDeducciones.Name = "dgvDeducciones";
+            this.dgvDeducciones.RowHeadersWidth = 62;
+            this.dgvDeducciones.RowTemplate.Height = 28;
+            this.dgvDeducciones.Size = new System.Drawing.Size(1182, 441);
+            this.dgvDeducciones.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1100, 102);
+            this.label2.Location = new System.Drawing.Point(49, 170);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(279, 33);
+            this.label2.Size = new System.Drawing.Size(162, 33);
             this.label2.TabIndex = 18;
-            this.label2.Text = "Resultados Estadísticos";
+            this.label2.Text = "Sueldo Base:";
             // 
-            // label3
+            // txtNombre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1115, 442);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(236, 33);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Tabla de Frecuencia";
+            this.txtNombre.Location = new System.Drawing.Point(319, 109);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(226, 26);
+            this.txtNombre.TabIndex = 20;
             // 
-            // lstResultados
+            // txtSueldoBase
             // 
-            this.lstResultados.FormattingEnabled = true;
-            this.lstResultados.ItemHeight = 20;
-            this.lstResultados.Location = new System.Drawing.Point(1106, 154);
-            this.lstResultados.Name = "lstResultados";
-            this.lstResultados.Size = new System.Drawing.Size(387, 264);
-            this.lstResultados.TabIndex = 20;
-            // 
-            // dgvFrecuencias
-            // 
-            this.dgvFrecuencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFrecuencias.Location = new System.Drawing.Point(1106, 502);
-            this.dgvFrecuencias.Name = "dgvFrecuencias";
-            this.dgvFrecuencias.RowHeadersWidth = 62;
-            this.dgvFrecuencias.RowTemplate.Height = 28;
-            this.dgvFrecuencias.Size = new System.Drawing.Size(487, 283);
-            this.dgvFrecuencias.TabIndex = 21;
+            this.txtSueldoBase.Location = new System.Drawing.Point(217, 177);
+            this.txtSueldoBase.Name = "txtSueldoBase";
+            this.txtSueldoBase.Size = new System.Drawing.Size(226, 26);
+            this.txtSueldoBase.TabIndex = 21;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1605, 855);
-            this.Controls.Add(this.dgvFrecuencias);
-            this.Controls.Add(this.lstResultados);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(1338, 806);
+            this.Controls.Add(this.txtSueldoBase);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvDatos);
-            this.Controls.Add(this.cmbVariables);
+            this.Controls.Add(this.dgvDeducciones);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lblSerie);
             this.Controls.Add(this.btnCalcular);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFrecuencias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeducciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,12 +141,10 @@
         private System.Windows.Forms.Label lblSerie;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbVariables;
-        private System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.DataGridView dgvDeducciones;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox lstResultados;
-        private System.Windows.Forms.DataGridView dgvFrecuencias;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtSueldoBase;
     }
 }
 
