@@ -1,4 +1,4 @@
-﻿namespace miPrimeraAplicacion
+﻿namespace miPrimeaAplicacion
 {
     partial class Form1
     {
@@ -30,75 +30,71 @@
         {
             this.btnCalcular = new System.Windows.Forms.Button();
             this.lblSerie = new System.Windows.Forms.Label();
-            this.txtMeses = new System.Windows.Forms.NumericUpDown();
-            this.dgvResultados = new System.Windows.Forms.DataGridView();
-            this.lblTotal = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMeses)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).BeginInit();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.txtSerie = new System.Windows.Forms.TextBox();
+            this.lstValores = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnCalcular
             // 
             this.btnCalcular.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(765, 87);
+            this.btnCalcular.Location = new System.Drawing.Point(685, 159);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(273, 70);
             this.btnCalcular.TabIndex = 4;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+           
             // 
             // lblSerie
             // 
             this.lblSerie.AutoSize = true;
-            this.lblSerie.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSerie.Location = new System.Drawing.Point(47, 26);
+            this.lblSerie.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSerie.Location = new System.Drawing.Point(64, 72);
             this.lblSerie.Name = "lblSerie";
-            this.lblSerie.Size = new System.Drawing.Size(519, 45);
-            this.lblSerie.TabIndex = 10;
-            this.lblSerie.Text = "Meses acumulados a N meses";
+            this.lblSerie.Size = new System.Drawing.Size(83, 32);
+            this.lblSerie.TabIndex = 24;
+            this.lblSerie.Text = "Serie:";
             // 
-            // txtMeses
+            // btnLimpiar
             // 
-            this.txtMeses.Location = new System.Drawing.Point(55, 114);
-            this.txtMeses.Name = "txtMeses";
-            this.txtMeses.Size = new System.Drawing.Size(132, 26);
-            this.txtMeses.TabIndex = 21;
+            this.btnLimpiar.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(685, 335);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(273, 70);
+            this.btnLimpiar.TabIndex = 25;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
             // 
-            // dgvResultados
+            // txtSerie
             // 
-            this.dgvResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResultados.Location = new System.Drawing.Point(55, 186);
-            this.dgvResultados.Name = "dgvResultados";
-            this.dgvResultados.RowHeadersWidth = 62;
-            this.dgvResultados.RowTemplate.Height = 28;
-            this.dgvResultados.Size = new System.Drawing.Size(983, 328);
-            this.dgvResultados.TabIndex = 22;
+            this.txtSerie.Location = new System.Drawing.Point(153, 79);
+            this.txtSerie.Name = "txtSerie";
+            this.txtSerie.Size = new System.Drawing.Size(428, 26);
+            this.txtSerie.TabIndex = 26;
             // 
-            // lblTotal
+            // lstValores
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(49, 562);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(74, 32);
-            this.lblTotal.TabIndex = 23;
-            this.lblTotal.Text = "Total";
+            this.lstValores.FormattingEnabled = true;
+            this.lstValores.ItemHeight = 20;
+            this.lstValores.Location = new System.Drawing.Point(70, 170);
+            this.lstValores.Name = "lstValores";
+            this.lstValores.Size = new System.Drawing.Size(484, 384);
+            this.lstValores.TabIndex = 27;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1187, 645);
-            this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.dgvResultados);
-            this.Controls.Add(this.txtMeses);
+            this.Controls.Add(this.lstValores);
+            this.Controls.Add(this.txtSerie);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lblSerie);
             this.Controls.Add(this.btnCalcular);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.txtMeses)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,9 +103,9 @@
         #endregion
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Label lblSerie;
-        private System.Windows.Forms.NumericUpDown txtMeses;
-        private System.Windows.Forms.DataGridView dgvResultados;
-        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.TextBox txtSerie;
+        private System.Windows.Forms.ListBox lstValores;
     }
 }
 
