@@ -7,7 +7,7 @@ namespace miPrimeraAplicacion
     public partial class Form1 : Form
     {
         String[][] etiquetas = { new[] { "Pie Cuadrado", "Vara Cuadrada", "Yarda Cuadrada", "Metro Cuadrado", "Tarea", "Manzana", "Hectárea" } };
-        Double[][] valores = { new[] { 0.09290304, 0.698739, 0.83612736, 1.0, 437.5, 6988.96, 10000.0 } };
+        Double[][] valores = { new[] { 0.09290304, 0.698896, 0.83612736, 1.0, 437.5, 6988.96, 10000.0 } };
 
         private int opcion = 0;
 
