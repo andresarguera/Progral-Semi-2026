@@ -6,91 +6,62 @@ namespace miPrimeraAplicacion
 {
     public partial class Form1 : Form
     {
-        String[][] etiquetas = { new[] { "Pie Cuadrado", "Vara Cuadrada", "Yarda Cuadrada", "Metro Cuadrado", "Tarea", "Manzana", "Hectárea" } };
-        Double[][] valores = { new[] { 0.09290304, 0.698896, 0.83612736, 1.0, 437.5, 6988.96, 10000.0 } };
-
-        private int opcion = 0;
-
         public Form1()
         {
             InitializeComponent();
-
-            btnCalcular.Click += btnCalcular_Click;
-            btnLimpiar.Click += btnLimpiar_Click;
-            
-            this.Load += Form1_Load;
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            cboDe.Items.Clear();
-            cboA.Items.Clear();
-
-            cboDe.Items.AddRange(etiquetas[opcion]);
-            cboA.Items.AddRange(etiquetas[opcion]);
-
-            cboDe.SelectedIndex = 0;
-            cboA.SelectedIndex = 3;
         }
-
-        private void btnCalcular_Click(object sender, EventArgs e)
+        private void btnProcesar_Click(object sender, EventArgs e)
         {
-            double cantidad;
+            double monto = double.Parse(txtEconomia.Text);
+            double impuesto;
+            if (monto <= 500)
+                impuesto = 1.5;
+            else if (monto <= 1000)
+                impuesto = ((monto - 500.01) / 1000 * 3) + 1.5;
 
-            if (!double.TryParse(txtCantidad.Text, NumberStyles.Any, CultureInfo.CurrentCulture, out cantidad))
-            {
-                MessageBox.Show("Ingrese un valor numérico válido.", "Dato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtCantidad.Focus();
-                return;
-            }
+            else if (monto <= 2000)
+                impuesto = ((monto - 1000.01) / 1000 * 3) + 3;
 
-            if (cantidad < 0)
-            {
-                MessageBox.Show("El área no puede ser negativa.", "Dato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtCantidad.Focus();
-                return;
-            }
+            else if (monto <= 3000)
+                impuesto = ((monto - 2000.01) / 1000 * 3) + 6;
 
-            if (cboDe.SelectedIndex == -1 || cboA.SelectedIndex == -1)
-            {
-                MessageBox.Show("Seleccione la unidad de origen y destino.", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            else if (monto <= 6000)
+                impuesto = ((monto - 3000.01) / 1000 * 2) + 9;
 
-            int de = cboDe.SelectedIndex;
-            int a = cboA.SelectedIndex;
+            else if (monto <= 18000)
+                impuesto = ((monto - 8000.01) / 1000 * 2) + 15;
 
-            double respuesta;
+            else if (monto <= 30000)
+                impuesto = ((monto - 18000.01) / 1000 * 2) + 39;
 
-            if (de == 5 && a == 4)
-            {
-                respuesta = cantidad * 16;
-            }
-            else if (de == 4 && a == 5)
-            {
-                respuesta = cantidad / 16;
-            }
+            else if (monto <= 60000)
+                impuesto = ((monto - 30000.01) / 1000 * 1) + 63;
+
+            else if (monto <= 100000)
+                impuesto = ((monto - 60000.01) / 1000 * 0.8) + 93;
+
+            else if (monto <= 200000)
+                impuesto = ((monto - 100000.01) / 1000 * 0.7) + 125;
+
+            else if (monto <= 300000)
+                impuesto = ((monto - 200000.01) / 1000 * 0.6) + 195;
+
+            else if (monto <= 400000)
+                impuesto = ((monto - 300000.01) / 1000 * 0.45) + 255;
+
+            else if (monto <= 500000)
+                impuesto = ((monto - 400000.01) / 1000 * 0.4) + 300;
+
+            else if (monto <= 1000000)
+                impuesto = ((monto - 500000.01) / 1000 * 0.30) + 340;
+
             else
-            {
-                double metrosCuadrados = valores[opcion][de] * cantidad;
-                respuesta = metrosCuadrados / valores[opcion][a];
-            }
+                impuesto = ((monto - 1000000.01) / 1000 * 0.18) + 490;
 
-            lblRespuesta.Text = respuesta.ToString("N6");
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            txtCantidad.Clear();
-            lblRespuesta.Text = "";
-            cboDe.SelectedIndex = 0;
-            cboA.SelectedIndex = 3;
-            txtCantidad.Focus();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            lblTotal.Text = "Total impuestos: " + impuesto.ToString("N2");
         }
     }
 }
