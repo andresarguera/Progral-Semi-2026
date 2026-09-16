@@ -50,7 +50,7 @@
             this.Controls.Add(this.lblListado);
             this.Name = "Form1";
             this.Text = "Sistema de gestión de tiempo y demanda";
-     
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
