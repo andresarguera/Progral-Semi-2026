@@ -18,6 +18,21 @@ namespace miPrimeraAplicacion
         {
 
         }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grbDatos_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTelefono_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
