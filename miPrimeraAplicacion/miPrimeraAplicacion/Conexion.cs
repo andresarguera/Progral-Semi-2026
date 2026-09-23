@@ -20,7 +20,7 @@ namespace miPrimeraAplicacion
         public Conexion()
         {//Constructor de la clase
             string cadenaConexion = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\dbacademica.mdf;Integrated Security=True";
-            objConexion.ConnectionString = cadenaCoenxion;
+            objConexion.ConnectionString = cadenaConexion;
             objConexion.Open(); //abrir la BD
         }
         public DataSet obtenerDatos()
