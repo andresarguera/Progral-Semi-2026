@@ -1,26 +1,31 @@
-﻿using System;
+﻿using miPrimeraAplicacion;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace miPrimeraAplicacion
 {
     public partial class Form1 : Form
     {
-
         public Form1()
         {
             InitializeComponent();
         }
         Conexion objConexion = new Conexion();
-        Dataset ds = new DataSet();
-        private object dt;
-        DataTable dateTable = new DateTable();
+        DataSet ds = new DataSet();
+        DataTable dt = new DataTable();
         String accion = "nuevo";
         int posicion = 0;
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            obtenerDatos();
+        }
         private void obtenerDatos()
         {
             ds.Clear();
@@ -30,38 +35,18 @@ namespace miPrimeraAplicacion
 
             mostrarDatos();
         }
-
         private void mostrarDatos()
         {
-            if (dt.Rows.Count > 0){
-               txtCodigoAlumno.Text = dt.Rows[posicion]["codigo"].ToString();
-               txtNombreAlumno.Text = dt.Rows[posicion]["nombre"].ToString();
-               txtDireccionAlumno.Text = dt.Rows[posicion]["direccion"].ToString();
-               txtTelefonoAlumno.Text = dt.Rows[posicion]["telefono"].ToString();
-               textEmailAlumnno.Text = dt.Rows[posicion]["email"].ToString();
+            if (dt.Rows.Count > 0)
+            {
+                txtCodigoAlumno.Text = dt.Rows[posicion]["código"].ToString();
+                txtNombreAlumno.Text = dt.Rows[posicion]["nombre"].ToString();
+                txtDireccionAlumno.Text = dt.Rows[posicion]["direccion"].ToString();
+                txtTelefonoAlumno.Text = dt.Rows[posicion]["telefono"].ToString();
+                txtEmailAlumno.Text = dt.Rows[posicion]["email"].ToString();
 
-               lblRegistrosAlumnos.Text = (posicion + 1) + " de " + dt.Rows.Count;
-
+                lblRegistrosAlumnos.Text = (posicion + 1) + " de " + dt.Rows.Count;
             }
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            obtenerDatos();
-        }
-
-        private void txtCodigo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grbDatos_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTelefono_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void activarDesactivarCtrls(Boolean estado)
@@ -79,24 +64,25 @@ namespace miPrimeraAplicacion
                 activarDesactivarCtrls(true);
             }
             else
-            {//Guardar los datos del alumno en la base de datos
+            {//Guardar
+
                 activarDesactivarCtrls(false);
                 btnAgregarAlumno.Text = "Agregar";
                 btnModificarAlumno.Text = "Modificar";
             }
         }
-
         private void btnModificarAlumno_Click(object sender, EventArgs e)
         {
             if (btnModificarAlumno.Text == "Modificar")
             {
                 btnAgregarAlumno.Text = "Guardar";
                 btnModificarAlumno.Text = "Cancelar";
-
                 activarDesactivarCtrls(true);
+
             }
             else
-            {//Guardar los datos del alumno en la base de datos
+            {//Guardar
+
                 activarDesactivarCtrls(false);
                 btnAgregarAlumno.Text = "Agregar";
                 btnModificarAlumno.Text = "Modificar";
@@ -106,12 +92,6 @@ namespace miPrimeraAplicacion
         private void btnSiguienteAlumno_Click(object sender, EventArgs e)
         {
             posicion++;
-            mostrarDatos();
-        }
-
-        private void btnPrimeroAlumno_Click(object sender, EventArgs e)
-        {
-            posicion = 0;
             mostrarDatos();
         }
 
@@ -126,7 +106,11 @@ namespace miPrimeraAplicacion
             posicion = dt.Rows.Count - 1;
             mostrarDatos();
         }
+
+        private void btnPrimeroAlumno_Click(object sender, EventArgs e)
+        {
+            posicion = 0;
+            mostrarDatos();
+        }
     }
 }
-
-       

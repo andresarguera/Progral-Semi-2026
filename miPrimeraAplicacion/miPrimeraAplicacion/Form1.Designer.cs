@@ -73,7 +73,6 @@
             this.grbDatos.TabIndex = 0;
             this.grbDatos.TabStop = false;
             this.grbDatos.Text = "Datos";
-            this.grbDatos.Enter += new System.EventHandler(this.grbDatos_Enter);
             // 
             // txtEmailAlumno
             // 
@@ -123,7 +122,6 @@
             this.lblTelefono.Size = new System.Drawing.Size(99, 25);
             this.lblTelefono.TabIndex = 4;
             this.lblTelefono.Text = "Teléfono:";
-            this.lblTelefono.Click += new System.EventHandler(this.lblTelefono_Click);
             // 
             // lblDireccion
             // 
@@ -151,7 +149,6 @@
             this.txtCodigoAlumno.Name = "txtCodigoAlumno";
             this.txtCodigoAlumno.Size = new System.Drawing.Size(274, 40);
             this.txtCodigoAlumno.TabIndex = 1;
-            this.txtCodigoAlumno.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // lblCodigo
             // 
