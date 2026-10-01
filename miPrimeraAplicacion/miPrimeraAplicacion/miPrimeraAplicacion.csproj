@@ -102,10 +102,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dbacademica.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="dbacademica_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>dbacademica.mdf</DependentUpon>
     </Content>
   </ItemGroup>
