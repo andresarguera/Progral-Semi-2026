@@ -261,6 +261,7 @@
             this.btnEliminarAlumno.TabIndex = 2;
             this.btnEliminarAlumno.Text = "Eliminar";
             this.btnEliminarAlumno.UseVisualStyleBackColor = true;
+            this.btnEliminarAlumno.Click += new System.EventHandler(this.btnEliminarAlumno_Click);
             // 
             // btnModificarAlumno
             // 
@@ -312,7 +313,6 @@
             this.txtBuscarAlumnos.Name = "txtBuscarAlumnos";
             this.txtBuscarAlumnos.Size = new System.Drawing.Size(650, 40);
             this.txtBuscarAlumnos.TabIndex = 1;
-          
             this.txtBuscarAlumnos.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarAlumnos_KeyUp);
             // 
             // Form1
