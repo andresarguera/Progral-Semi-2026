@@ -10,3 +10,4 @@ C:\Users\Admin\Desktop\Progral-Semi-2026\miPrimeraAplicacion\miPrimeraAplicacion
 C:\Users\Admin\Desktop\Progral-Semi-2026\miPrimeraAplicacion\miPrimeraAplicacion\bin\Debug\miPrimeraAplicacion.pdb
 C:\Users\Admin\Desktop\Progral-Semi-2026\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.exe
 C:\Users\Admin\Desktop\Progral-Semi-2026\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.pdb
+C:\Users\Admin\Desktop\Progral-Semi-2026\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.frmPrincipal.resources
