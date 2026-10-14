@@ -104,6 +104,7 @@
             this.materiasToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
             this.materiasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.materiasToolStripMenuItem.Text = "Materias";
+            this.materiasToolStripMenuItem.Click += new System.EventHandler(this.materiasToolStripMenuItem_Click);
             // 
             // periodosToolStripMenuItem
             // 
@@ -112,6 +113,7 @@
             this.periodosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.periodosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.periodosToolStripMenuItem.Text = "Periodos";
+            this.periodosToolStripMenuItem.Click += new System.EventHandler(this.periodosToolStripMenuItem_Click);
             // 
             // notasToolStripMenuItem
             // 

@@ -30,6 +30,9 @@ namespace miPrimeraAplicacion
             objDataAdapter.SelectCommand = objComando;
             objDataAdapter.Fill(objDs, "alumnos");
 
+            objComando.CommandText = "SELECT * FROM materias";
+            objDataAdapter.Fill(objDs, "materias");
+
             return objDs;
         }
 
@@ -70,6 +73,42 @@ namespace miPrimeraAplicacion
             {
                 return ex.Message;
             }
+        }
+
+        public string administrarDatosMaterias(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+                sql = "INSERT INTO Materias(código,nombre,UV) VALUES ('" + datos[1] + "', '" + datos[2] + "', '" + datos[3] + "')";
+            }
+            else if (accion == "modificar")
+            {
+                sql = "UPDATE Materias SET código='" + datos[1] + "', nombre='" + datos[2] + "', uv='" + datos[3] + "' WHERE idMateria='" + datos[0] + "'";
+            }
+            else if (accion == "eliminar")
+            {
+                sql = "DELETE FROM Materias WHERE idMateria='" + datos[0] + "'";
+            }
+            return ejecutarSQL(sql);
+        }
+        public String ejecutarSQL(String sql)
+        {
+            try
+            {
+                objComando.Connection = objConexion;
+                objComando.CommandText = sql;
+                return objComando.ExecuteNonQuery().ToString();
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        internal string administrarDatosMaterias()
+        {
+            throw new NotImplementedException();
         }
     }
 }
