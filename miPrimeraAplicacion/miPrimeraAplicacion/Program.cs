@@ -9,15 +9,20 @@ namespace miPrimeraAplicacion
 {
     internal static class Program
     {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
+        
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrincipal());
+
+
+            // Cambia esto:
+            // Application.Run(new login());
+
+            // Por esto:
+            Application.Run(new frmLogin());
         }
     }
 }

@@ -13,3 +13,16 @@ C:\Users\Admin\Desktop\Progral-Semi-2026\miPrimeraAplicacion\miPrimeraAplicacion
 C:\Users\Admin\Desktop\Progral-Semi-2026\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.frmPrincipal.resources
 C:\Users\Admin\Desktop\Progral-Semi-2026\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.frmMaterias.resources
 C:\Users\Admin\Desktop\Progral-Semi-2026\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.frmPeriodos.resources
+C:\Users\Andres Arguera\Desktop\Programcion 1\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.csproj.AssemblyReference.cache
+C:\Users\Andres Arguera\Desktop\Programcion 1\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.frmLogin.resources
+C:\Users\Andres Arguera\Desktop\Programcion 1\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.frm_usuario.resources
+C:\Users\Andres Arguera\Desktop\Programcion 1\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.Properties.Resources.resources
+C:\Users\Andres Arguera\Desktop\Programcion 1\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.csproj.GenerateResource.cache
+C:\Users\Andres Arguera\Desktop\Programcion 1\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.csproj.CoreCompileInputs.cache
+C:\Users\Andres Arguera\Desktop\Programcion 1\miPrimeraAplicacion\miPrimeraAplicacion\bin\Debug\dbacademica.mdf
+C:\Users\Andres Arguera\Desktop\Programcion 1\miPrimeraAplicacion\miPrimeraAplicacion\bin\Debug\dbacademica_log.ldf
+C:\Users\Andres Arguera\Desktop\Programcion 1\miPrimeraAplicacion\miPrimeraAplicacion\bin\Debug\miPrimeraAplicacion.exe.config
+C:\Users\Andres Arguera\Desktop\Programcion 1\miPrimeraAplicacion\miPrimeraAplicacion\bin\Debug\miPrimeraAplicacion.exe
+C:\Users\Andres Arguera\Desktop\Programcion 1\miPrimeraAplicacion\miPrimeraAplicacion\bin\Debug\miPrimeraAplicacion.pdb
+C:\Users\Andres Arguera\Desktop\Programcion 1\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.exe
+C:\Users\Andres Arguera\Desktop\Programcion 1\miPrimeraAplicacion\miPrimeraAplicacion\obj\Debug\miPrimeraAplicacion.pdb

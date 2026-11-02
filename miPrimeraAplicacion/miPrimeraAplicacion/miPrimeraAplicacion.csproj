@@ -67,52 +67,25 @@
     <Compile Include="DateTable.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMaterias.cs">
+    <Compile Include="frmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMaterias.Designer.cs">
-      <DependentUpon>frmMaterias.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmNotas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmNotas.Designer.cs">
-      <DependentUpon>frmNotas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPeriodos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPeriodos.Designer.cs">
-      <DependentUpon>frmPeriodos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <Compile Include="frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMaterias.resx">
-      <DependentUpon>frmMaterias.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmNotas.resx">
-      <DependentUpon>frmNotas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPeriodos.resx">
-      <DependentUpon>frmPeriodos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,6 +118,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>dbacademica.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\12.jfif" />
     <None Include="Resources\67.png" />
     <None Include="Resources\periodo.png" />
     <None Include="Resources\cuaderno.png" />
